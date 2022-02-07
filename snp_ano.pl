@@ -16,8 +16,8 @@ while (my $l =<$i>){
                 open my $i2,"<",$in2;
                 while (my $l2=<$i2>){
                         my @d =split /\t/,$l2;
-                        if ($d[1] eq $x[0] && $d[2] == $x[1] ) {
-                                    print "$l$l2\n";
+                        if ($d[1] eq $x[0] && ($d[3] >= $x[1] && $d[4] <=$x[1])) {
+                                    print "$l$l2";
                         }
                 }
          }
